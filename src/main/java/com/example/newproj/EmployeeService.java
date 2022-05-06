@@ -23,12 +23,7 @@ public class EmployeeService {
         return empRepository.findAll();
     }
 
-    public List<Employee> getallEmployees()
-    {
-        List<Employee> employees = new ArrayList<Employee>();
-        empRepository.findAll().forEach(employee1 -> employees.add(employee1));
-        return employees;
-    }
+
     //READ BY ID
     public Employee getEmployeesById(Long empId)
     {
