@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
+
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
 
 
 
@@ -20,9 +20,9 @@ public class EmployeeController {
 
 
 
-
     @Autowired
     EmployeeService empService;
+
 
 
     @RequestMapping(value="/employees", method=RequestMethod.POST)
@@ -34,6 +34,7 @@ public class EmployeeController {
     public List<Employee> readEmployees() {
         return empService.getEmployees();
     }
+
 
     @GetMapping("/employees/{employeeid}")
     private Employee getEmployees(@PathVariable("employeeid") Long employeeid)
